@@ -1,0 +1,562 @@
+/*
+Theme Name: Sculpt
+Theme URI: http://www.cryoutcreations.eu/wordpress-themes/sculpt
+Description: Designed with both speed and customization in mind, Sculpt is perfect for a wide range of websites, from personal blogs and portfolios to e-commerce shops and professional business sites. Sculpt is lightweight and fast thus ensuring optimal performance and it's fully responsive, optimized for SEO, and mobile-friendly. It's also fully compatible with WooCommerce, making it easy to set up an online store and start selling products in no time. With its eye-catching design, Sculpt features a unique blend of bold colors, sleek lines, and tasteful animations that are sure to capture the attention of your visitors. The theme is also highly customizable, allowing you to easily change colors, fonts, layouts and visual elements to suit your brand and style. Sculpt is also translation and RTL ready and, as a child theme of Bravada, has already been translated in over 20 languages. Sculpt is the perfect choice for anyone looking to create a stunning and functional website that's fast, customizable, and easy to use.
+Author: Cryout Creations
+Author URI: http://www.cryoutcreations.eu
+Version: 1.0.0
+Tested up to: 6.2
+Requires PHP: 5.6
+License: GNU General Public License v3.0
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Tags: one-column, two-columns, three-columns, right-sidebar, left-sidebar, grid-layout, custom-background, custom-colors, custom-header, flexible-header, custom-menu, featured-image-header, featured-images, front-page-post-form, full-width-template, footer-widgets, microformats, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, blog, e-commerce, photography
+Template: bravada
+Text Domain: sculpt
+
+Sculpt WordPress Theme - Copyright 2023, Cryout Creations - http://www.cryoutcreations.eu
+This theme, like WordPress, is licensed under the GPL.
+*/
+
+
+/* Site title */
+#site-title span a::before {
+    left: 0;
+	right: 0;
+	width: 100%;
+	margin: 0 auto;
+    transition: 1s all ease;
+}
+
+#site-title a {
+    letter-spacing: -0.05em;
+}
+
+/* Top menu */
+#access > div > ul > li > a,
+#access ul.sub-menu li a,
+#access ul.children li a {
+    font-weight: 400;
+    letter-spacing: -0.03em;
+}
+
+#access > div > ul > li > a > span::before {
+    left: -15px;
+    right: -15px;
+    margin: 0 auto;
+}
+
+#access .sub-menu li a span,
+#access .children li a span {
+	-webkit-transition: .5s ease-out background;
+	transition: .5s ease-out background;
+}
+
+#access .sub-menu li a:hover span,
+#access .children li a:hover span {
+	background: rgba(255,255,255,.05);
+}
+
+/* Main menu */
+nav#mobile-menu #mobile-nav a {
+    letter-spacing: -0.1em;
+}
+
+#mobile-nav .searchform input[type="search"] {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -0.1em;
+}
+
+/* Title animation */
+.animated-title .caption-title-word > span {
+	position: relative;
+	display: inline-block;
+	line-height: 1.2;
+	opacity: 0;
+    filter: blur(5px);
+	-webkit-animation: showwords 2.5s ease forwards;
+	animation: showwords 2.5s ease forwards;
+}
+
+
+@-webkit-keyframes showwords {
+	to {
+		opacity: 1;
+        filter: blur(0);
+	}
+}
+
+@keyframes showwords {
+	to {
+		opacity: 1;
+        filter: blur(0);
+	}
+}
+
+.animated-title .caption-title-word span.cry-single {
+	position: relative;
+}
+
+.animated-title .caption-title-word span.cry-double {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+
+.animated-title span.cry-single,
+.animated-title span.cry-double {
+	-webkit-transition: all .5s ease-out;
+	transition: all .5s ease-out;
+}
+
+.animated-title .caption-title-word > span:nth-child(n) span.cry-single.animated-letter {
+	-webkit-animation: 1.5s 0.25s animation-fadeOut-blur ease-out forwards;
+	animation: 1.5s 0.25s animation-fadeOut-blur ease-out forwards;
+}
+
+.animated-title .caption-title-word > span:nth-child(2n) span.cry-single.animated-letter {
+	-webkit-animation: 1.5s 0.25s animation-fadeOut-blur2 ease-out forwards;
+	animation: 1.5s 0.25s animation-fadeOut-blur2 ease-out forwards;
+}
+
+.animated-title .caption-title-word > span:nth-child(n) span.cry-double.animated-letter {
+	-webkit-animation: 1.5s animation-fadeIn-blur ease-out forwards;
+	animation: 1.5s animation-fadeIn-blur ease-out forwards;
+}
+
+.animated-title .caption-title-word > span:nth-child(2n) span.cry-double.animated-letter {
+	-webkit-animation: 1.5s animation-fadeIn-blur2 ease-out forwards;
+	animation: 1.5s animation-fadeIn-blur2 ease-out forwards;
+}
+
+@-webkit-keyframes animation-fadeIn-blur {
+
+	0% {
+		opacity: 0;
+		-webkit-filter: blur(15px);
+		filter: blur(15px);
+        transform: scale(2);
+	}
+	100% {
+		opacity: 1;
+		-webkit-filter: blur(0);
+		filter: blur(0);
+        transform: scale(1);
+	}
+
+}
+
+@keyframes animation-fadeIn-blur {
+
+	0% {
+		opacity: 0;
+		-webkit-filter: blur(15px);
+		filter: blur(15px);
+        transform: scale(2);
+	}
+	100% {
+		opacity: 1;
+		-webkit-filter: blur(0);
+		filter: blur(0);
+        transform: scale(1);
+	}
+
+}
+
+@-webkit-keyframes animation-fadeIn-blur2 {
+
+	0% {
+		opacity: 0;
+		-webkit-filter: blur(10px);
+		filter: blur(10px);
+        transform: scale(3);
+	}
+	100% {
+		opacity: 1;
+		-webkit-filter: blur(0);
+		filter: blur(0);
+        transform: scale(1);
+	}
+
+}
+
+@keyframes animation-fadeIn-blur2 {
+
+	0% {
+		opacity: 0;
+		-webkit-filter: blur(10px);
+		filter: blur(10px);
+        transform: scale(3);
+	}
+	100% {
+		opacity: 1;
+		-webkit-filter: blur(0);
+		filter: blur(0);
+        transform: scale(1);
+	}
+
+}
+
+@-webkit-keyframes animation-fadeOut-blur {
+
+	0% {
+		opacity: 1;
+		-webkit-filter: blur(0);
+		filter: blur(0);
+        transform: scale(1);
+	}
+	100% {
+		opacity: 0;
+		-webkit-filter: blur(5px);
+		filter: blur(5px);
+        transform: scale(5);
+	}
+
+}
+
+@keyframes animation-fadeOut-blur {
+
+	0% {
+		opacity: 1;
+		-webkit-filter: blur(0);
+		filter: blur(0);
+        transform: scale(1);
+	}
+	100% {
+		opacity: 0;
+		-webkit-filter: blur(5px);
+		filter: blur(5px);
+        transform: scale(5);
+	}
+
+}
+
+/* Hamburger menu */
+.hamburger {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	overflow: visible;
+	display: inline-block;
+	width: 36px;
+	height: 20px;
+	margin: auto 0 auto 1em;
+	border: 0;
+	border-radius: 0;
+	padding: 0;
+	-webkit-transform: rotate(0);
+	transform: rotate(0);
+	-webkit-transition: .5s ease-in-out;
+	transition: .5s ease-in-out;
+	background: transparent;
+	cursor: pointer;
+}
+
+.hamburger:hover {
+	background: transparent;
+}
+
+.hamburger span {
+	display: block;
+	position: absolute;
+	height: 3px;
+	width: 100%;
+	border-radius: 0;
+	opacity: 1;
+	left: 0;
+	-webkit-transform: rotate(0);
+	transform: rotate(0);
+}
+
+.hamburger span:nth-child(1) {
+	top: 0;
+    width: 75%;
+	-webkit-transform-origin: left top;
+	transform-origin: left top;
+    animation: 1s animation-hamburger1 linear both infinite;
+    animation-play-state: paused;
+}
+
+.hamburger span:nth-child(2) {
+	top: 9px;
+    width: 100%;
+	-webkit-transform-origin: left center;
+	transform-origin: left center;
+    animation: 1s animation-hamburger2 linear both infinite;
+    animation-play-state: paused;
+}
+
+.hamburger span:nth-child(3) {
+	top: 18px;
+	width: 55%;
+	-webkit-transform-origin: left bottom;
+	transform-origin: left bottom;
+    animation: 1s animation-hamburger3 linear both infinite;
+    animation-play-state: paused;
+}
+
+@keyframes animation-hamburger1 {
+    0% {
+        width: 75%;
+    }
+    25% {
+        width: 100%;
+    }
+    75% {
+        width: 55%;
+    }
+    100% {
+        width: 75%;
+    }
+}
+
+@keyframes animation-hamburger2 {
+    0% {
+        width: 100%;
+    }
+    50% {
+        width: 55%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes animation-hamburger3 {
+    0% {
+        width: 55%;
+    }
+    50% {
+        width: 100%;
+    }
+    100% {
+        width: 55%;
+    }
+}
+
+.hamburger:hover span:nth-child(1) {
+    animation-play-state: running;
+}
+
+.hamburger:hover span:nth-child(2) {
+    animation-play-state: running;
+}
+
+.hamburger:hover span:nth-child(3) {
+    animation-play-state: running;
+}
+
+.burgermenu-active .hamburger span:nth-child(n) {
+	width: 100%;
+    animation: none;
+}
+
+.burgermenu-active .hamburger span:nth-child(1) {
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+	top: -3px;
+}
+
+.burgermenu-active .hamburger span:nth-child(2) {
+	width: 0;
+	opacity: 0;
+	-webkit-transform: translateX(-50%);
+	        transform: translateX(-50%);
+}
+
+.burgermenu-active .hamburger span:nth-child(3) {
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	top: 22px;
+}
+
+/* Header image clip path */
+.header-image,
+#header-overlay {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 1vw), 52% calc(100% - 1vw), 50% 100%, 48% calc(100% - 1vw), 0 calc(100% - 1vw), 0 0);
+}
+
+body.single #container:not(.bravada-landing-page) .main {
+    margin-top: -1.2em;
+    overflow: visible;
+}
+
+body:not(.bravada-landing-page).single #container {
+    overflow: visible;
+}
+
+/* Metas */
+.entry-meta .author-avatar {
+    overflow: visible;
+}
+
+.author #header-page-title .avatar,
+.entry-meta .author-avatar .avatar {
+    width: 5em;
+    height: 5em;
+    border-radius: 0;
+    border-width: 6px;
+    border-color: #FFF;
+    transform-origin: left bottom;
+    transform: rotate(0);
+    transition: .5s ease-out transform;
+}
+
+.author-info .author-avatar {
+    width: 92px;
+    height: 92px;
+}
+
+.author-info .avatar {
+    border-radius: 0;
+    padding: 6px;
+    border-color: #FFF;
+    transform-origin: left bottom;
+	transform: rotate(0);
+    transition: .5s ease-out transform;
+}
+
+.author-info:hover .avatar {
+	transform: rotate(-10deg);
+    top: 0;
+    padding: 6px;
+}
+
+.entry-meta .author-avatar:hover .avatar,
+#author-avatar:hover .avatar {
+	transform: rotate(-10deg);
+}
+
+#header-page-title .category-metas a {
+    background: rgba(255,255,255,0.75);
+    border: none;
+    padding: 5px 7px;
+    text-transform: uppercase;
+    letter-spacing: -0.05em;
+}
+
+.single .entry-meta:not(.entry-utility) .sep::after {
+    display: none;
+}
+
+#header-page-title .date {
+    opacity: 0.75;
+}
+
+.bravada-comment-icons .comment-form-comment textarea,
+ .bravada-comment-icons .comment-form-author input,
+ .bravada-comment-icons .comment-form-email input,
+ .bravada-comment-icons .comment-form-url input {
+    border: 2px solid rgba(0,0,0,.1);
+    font-size: 0.9em;
+    letter-spacing: -0.075em;
+    text-transform: uppercase;
+ }
+
+/* Articles */
+a.continue-reading-link {
+    width: 100%;
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    text-transform: uppercase;
+    letter-spacing: -0.05em;
+}
+
+.entry-title,
+.main .page-title {
+    letter-spacing: -0.05em;
+}
+
+body .main #content-masonry .post-thumbnail-container span.bl_categ {
+    bottom: -5em;
+    transition-duration: .5s;
+}
+
+body .main #content-masonry .post-thumbnail-container:hover span.bl_categ {
+    bottom: 0;
+}
+
+body .main #content-masonry .post-thumbnail-container .comments-link {
+    top: -5em;
+    transition-duration: .5s;
+}
+
+body .main #content-masonry .post-thumbnail-container:hover .comments-link {
+    top: 0;
+}
+
+#content-masonry article.hentry {
+    box-shadow: 0 10px 20px rgba(0,0,0,.1);
+}
+
+.pagination span, 
+.pagination a {
+	font-weight: bold;
+}
+
+#nav-below span {
+	font-size: 2em;
+	font-weight: 200;
+}
+
+/* Footer */
+.footermenu ul li a {
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: -0.05em;
+}
+
+/* Landing page */
+.lp-block .lp-block-title {
+    font-size: 1.1em;
+}
+
+a.staticslider-button,
+.seriousslider-theme .seriousslider-caption-buttons a.seriousslider-button {
+	letter-spacing: -0.05em;
+    text-transform: uppercase;
+}
+
+a.staticslider-button:nth-child(odd),
+.seriousslider-theme .seriousslider-caption-buttons a.seriousslider-button:nth-child(odd) {
+	border-color: transparent;
+}
+
+a.staticslider-button:hover,
+.seriousslider-theme .seriousslider-caption-buttons a.seriousslider-button:hover {
+	/* border-color: rgba(255,255,255,1); */
+	box-shadow: 0 0 25px 5px rgba(0,0,0,0.20);
+}
+
+.widget-title,
+#comments-title,
+#reply-title,
+.related-posts .related-main-title,
+.main .page-title,
+#nav-below em,
+.lp-text .lp-text-title,
+.lp-boxes .lp-box-title,
+.lp-box-readmore,
+.lp-block .lp-block-title,
+#cryout_ajax_more_trigger > span,
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+.bravada-normalizedtags #content .tagcloud a {
+    letter-spacing: -0.05em;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+    font-size: 0.9em;
+}
+
+
+/* FIN */
