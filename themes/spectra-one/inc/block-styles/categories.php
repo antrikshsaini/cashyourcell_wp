@@ -1,10 +1,10 @@
 <?php
 /**
- * Register Categories Block Styles.
+ * Register Category Styles.
  *
  * @package Spectra One
  * @author Brainstorm Force
- * @since 0.0.1
+ * @since 1.0.0
  */
 
 declare( strict_types=1 );
@@ -15,25 +15,60 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+$swt_parent_class = '.is-style-' . SWT_PFX . '-categories-minimal';
+
 register_block_style(
-	'core/post-terms',
+	'core/categories',
 	array(
-		'name'         => SWT_PFX . '-post-terms-pill',
-		'label'        => __( 'Pill', 'spectra-one' ),
+		'name'         => SWT_PFX . '-categories-minimal',
+		'label'        => __( 'Minimal', 'spectra-one' ),
 		'inline_style' => '
-			.is-style-' . SWT_PFX . '-post-terms-pill a {
-				display: inline-block;
-				padding: 6px 12px;
-				border-radius: var(--wp--custom--border-radius--full);
-				color: var(--wp--preset--color--body);
-				background-color: var(--wp--preset--color--outline);
-				margin-right: var(--wp--preset--spacing--xx-small);
-				margin-bottom: var(--wp--preset--spacing--xx-small);
-				line-height: var(--wp--custom--line-height--initial);
+
+			' . $swt_parent_class . ' {
+				padding-left: 0;
+				list-style: none;
 			}
 
-			.is-style-' . SWT_PFX . '-post-terms-pill .wp-block-post-terms__separator {
-				display: none;
+			' . $swt_parent_class . ' .cat-item {
+				font-size: var(--wp--preset--font-size--small);
+				margin-bottom: var(--wp--preset--spacing--xx-small);
+			}
+			
+			' . $swt_parent_class . '.wp-block-categories-dropdown select {
+				padding-' . rtl_css( 'left' ) . ': var(--wp--preset--spacing--x-small);
+				padding-' . rtl_css( 'right' ) . ': var(--wp--preset--spacing--large);
+				padding-top: var(--wp--preset--spacing--x-small);
+				padding-bottom: var(--wp--preset--spacing--x-small);
+				border: 1px solid var(--wp--preset--color--outline);
+				border-radius: var(--wp--custom--border-radius--small);
+				font-weight: var(--wp--custom--font-weight--regular);
+				font-size: var(--wp--preset--font-size--small);
+				color: var(--wp--preset--color--heading);
+				background-color: var(--wp--preset--color--background);
+				width: 100%;
+				height: 60px;
+				appearance: none;
+			}
+
+			' . $swt_parent_class . '.wp-block-categories-dropdown select:focus-visible {
+				outline-color: var(--wp--preset--color--heading);
+			}
+
+			' . $swt_parent_class . '.wp-block-categories-dropdown {
+				position: relative;
+			}
+
+			' . $swt_parent_class . '.wp-block-categories-dropdown:after {
+				content: "\e900";
+				position: absolute;
+				font-family: "icomoon" !important;
+				font-size: var(--wp--preset--font-size--medium);
+				' . rtl_css( 'right' ) . ': 25px;
+				top: 50%;
+				transform: translateY(-50%);
+				pointer-events: none;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
 			}
 		',
 	) 

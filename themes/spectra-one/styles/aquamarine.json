@@ -7,22 +7,22 @@
       "palette": [
         {
           "name": "Primary",
-          "color": "#86FED6",
+          "color": "#72FEEB",
           "slug": "primary"
         },
         {
           "name": "Secondary",
-          "color": "#A3FFE0",
+          "color": "#99FFF1",
           "slug": "secondary"
         },
         {
           "name": "Tertiary",
-          "color": "#171528",
+          "color": "#103140",
           "slug": "tertiary"
         },
         {
           "name": "Quaternary",
-          "color": "#171528",
+          "color": "#103141",
           "slug": "quaternary"
         },
         {
@@ -37,22 +37,27 @@
         },
         {
           "name": "Surface",
-          "color": "#171528",
+          "color": "#103142",
           "slug": "surface"
         },
         {
           "name": "Background",
-          "color": "#0F0C1D",
+          "color": "#092635",
           "slug": "background"
         },
         {
+          "name": "Foreground",
+          "color": "#103143",
+          "slug": "foreground"
+        },
+        {
           "name": "Outline",
-          "color": "#353248",
+          "color": "#163D50",
           "slug": "outline"
         },
         {
           "name": "Neutral",
-          "color": "#9CA3AF",
+          "color": "#6E7787",
           "slug": "neutral"
         },
         {
@@ -71,11 +76,18 @@
           "slug": "inherit"
         }
       ],
+        "gradients": [
+          {
+              "slug": "primary",
+              "gradient": "linear-gradient(284.04deg, #092635 0%, #101554 25.33%, #0D574D 52.07%, #103141 100%)",
+              "name": "Primary"
+          }
+      ],
       "duotone": [
         {
           "colors": [
-            "#9AE6FE",
-            "#9AE6FE"
+            "#C2FEF6",
+            "#C2FEF6"
           ],
           "slug": "primary",
           "name": "Primary"

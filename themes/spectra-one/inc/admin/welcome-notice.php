@@ -59,10 +59,9 @@ function render_welcome_notice(): void {
 
 	ob_start();
 
-	$banner_image = get_uri() . 'assets/image/spectra-plugin-banner.jpg';
+	$banner_image  = get_uri() . 'assets/image/spectra-plugin-banner.png';
+	$lean_more_url = 'https://wpspectra.com/';
 	?>
-
-
 
 	<div class="notice notice-info swt-welcome-notice">
 		<button type="button" class="notice-dismiss"><span class="screen-reader-text"><?php esc_html_e( 'Close this notice..', 'spectra-one' ); ?></span></button>
@@ -70,26 +69,29 @@ function render_welcome_notice(): void {
 			<div class="swt-col">
 				<div class="notice-content">
 					<p class="sub-notice-title">
-						<?php esc_html_e( 'Spectra — WordPress Gutenberg Blocks', 'spectra-one' ); ?>
+						<?php esc_html_e( 'Thanks for installing the Spectra One theme 🎉', 'spectra-one' ); ?>
 					</p>
 					<h2 class="notice-title">
-						<?php esc_html_e( 'Page builder that works with the default WordPress editor', 'spectra-one' ); ?>
+						<?php esc_html_e( 'Please install the Spectra Builder', 'spectra-one' ); ?>
 					</h2>
 					<p class="description">
-						<?php esc_html_e( 'Whether you are a beginner, marketer, or professional, Spectra has the tools and resources you can rely on to succeed', 'spectra-one' ); ?>
+						<?php esc_html_e( 'Once you have installed the Spectra Builder plugin, you will be ready to build amazing, fast-loading websites.', 'spectra-one' ); ?>
 					</p>
 					<div class="notice-actions">
 						<button id="swt-install-spectra" class="button button-primary button-hero">
 							<span class="text">
 								<?php
-								'installed' === $plugin_status ? esc_html_e( 'Activate Spectra Plugin', 'spectra-one' ) : esc_html_e( 'Install & Activate Spectra', 'spectra-one' );
+								'installed' === $plugin_status ? esc_html_e( 'Activate Spectra Builder', 'spectra-one' ) : esc_html_e( 'Install Spectra Builder', 'spectra-one' );
 								?>
 							</span>
 						</button>
+						<a href="<?php echo esc_url( $lean_more_url ); ?>" target="_blank" class="button button-primary button-hero">
+							<?php esc_html_e( 'Learn More', 'spectra-one' ); ?>
+						</a>
 					</div>
 				</div>
 			</div>
-			<div class="swt-col">
+			<div class="swt-col swt-col-right">
 				<div class="image-container">
 					<img src="<?php echo esc_url( $banner_image ); ?>" alt="spectra-install-banner">
 				</div>
@@ -131,7 +133,7 @@ function welcome_notice_display_conditions(): bool {
 	}
 
 	// Check if welcome notice was closed.
-	if ( get_option( 'swt-dismiss-welcome-notice', 'no' ) === 'yes' ) {
+	if ( 'yes' === get_option( 'swt-dismiss-welcome-notice', 'no' ) ) {
 		return false;
 	}
 

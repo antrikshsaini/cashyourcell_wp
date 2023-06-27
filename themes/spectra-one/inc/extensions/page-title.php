@@ -29,10 +29,7 @@ function remove_page_title( string $title, int $post_id = 0 ):string {
 		return $title;
 	}
 
-	$get_check_title = get_post_meta( $post_id, 'swt_meta_site_title_display', true );
-	$check_meta      = $get_check_title ? false : true;
-
-	if ( ! is_admin() && is_singular() && boolval( $check_meta ) && ! in_the_loop() ) {
+	if ( is_page_title( $post_id ) ) {  /** @psalm-suppress UndefinedFunction */ // phpcs:ignore PossiblyFalseArgument, Generic.Commenting.DocComment.MissingShort -- Function exist in helpers.php
 		return '';
 	}
 

@@ -40,6 +40,7 @@ register_block_style(
                 padding: 4px;
                 border: 1px solid var(--wp--preset--color--outline);
                 border-radius: var(--wp--custom--border-radius--small);
+                background-color: var(--wp--preset--color--background);
             }
 
             ' . $swt_parent_class . ' .wp-block-search__input {

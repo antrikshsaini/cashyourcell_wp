@@ -28,14 +28,14 @@ add_filter( 'render_block', SWT_NS . 'hide_elements', 10, 2 );
 function hide_elements( string $block_content, array $block ): string {
 	$post_id = absint( get_the_ID() );
 
-	if ( get_post_meta( $post_id, 'swt_meta_header_display', true ) ) {
+	if ( get_post_meta( $post_id, '_swt_meta_header_display', true ) ) {
 
 		if ( isset( $block['attrs']['slug'] ) && 'header' === $block['attrs']['slug'] ) {
 			return '';
 		}
 	}
 
-	if ( get_post_meta( $post_id, 'swt_meta_footer_display', true ) ) {
+	if ( get_post_meta( $post_id, '_swt_meta_footer_display', true ) ) {
 
 		if ( isset( $block['attrs']['slug'] ) && 'footer' === $block['attrs']['slug'] ) {
 			return '';
@@ -54,11 +54,11 @@ function hide_elements( string $block_content, array $block ): string {
 function get_disable_section_fields():array {
 	$swt_page_meta_elements = array(
 		array(
-			'key'   => 'swt_meta_header_display',
+			'key'   => '_swt_meta_header_display',
 			'label' => __( 'Disable Header', 'spectra-one' ),
 		),
 		array(
-			'key'   => 'swt_meta_footer_display',
+			'key'   => '_swt_meta_footer_display',
 			'label' => __( 'Disable Footer', 'spectra-one' ),
 		),
 	);

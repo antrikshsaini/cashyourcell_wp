@@ -7,22 +7,22 @@
             "palette": [
                 {
                     "name": "Primary",
-                    "color": "#F56200",
+                    "color": "#FB761E",
                     "slug": "primary"
                 },
                 {
                     "name": "Secondary",
-                    "color": "#FF6C0A",
+                    "color": "#FF8533",
                     "slug": "secondary"
                 },
                 {
                     "name": "Tertiary",
-                    "color": "#FFFFFF",
+                    "color": "#FEFAEC",
                     "slug": "tertiary"
                 },
                 {
                     "name": "Quaternary",
-                    "color": "#FFFFFF",
+                    "color": "#ECFDF6",
                     "slug": "quaternary"
                 },
                 {
@@ -37,22 +37,27 @@
                 },
                 {
                     "name": "Surface",
-                    "color": "#FFFFFF",
+                    "color": "#F7FBFC",
                     "slug": "surface"
                 },
                 {
                     "name": "Background",
-                    "color": "#FBF9F9",
+                    "color": "#FFFFFF",
                     "slug": "background"
                 },
                 {
+                    "name": "Foreground",
+                    "color": "#FB761F",
+                    "slug": "foreground"
+                },
+                {
                     "name": "Outline",
-                    "color": "#F8F4F2",
+                    "color": "#EBF2F5",
                     "slug": "outline"
                 },
                 {
                     "name": "Neutral",
-                    "color": "#9CA3AF",
+                    "color": "#6E7787",
                     "slug": "neutral"
                 },
                 {
@@ -71,11 +76,18 @@
                     "slug": "inherit"
                 }
             ],
+            "gradients": [
+                {
+                  "slug": "primary",
+                  "gradient": "linear-gradient(286.83deg, #F7B733 -1.55%, #FC4A1A 100%)",
+                  "name": "Primary"
+                }
+            ],
             "duotone": [
                 {
                     "colors": [
-                        "#F56200",
-                        "#F56200"
+                        "#FB761E",
+                        "#FB761E"
                     ],
                     "slug": "primary",
                     "name": "Primary"

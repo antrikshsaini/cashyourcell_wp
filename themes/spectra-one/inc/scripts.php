@@ -42,9 +42,9 @@ function enqueue_frontend_scripts(): void {
 	}
 
 	/* Load Theme Styles*/
-	wp_enqueue_style( SWT_SLUG, $css_uri . '/style' . $file_prefix . '.css', array(), SWT_VER );
+	wp_enqueue_style( SWT_SLUG, $css_uri . 'style' . $file_prefix . '.css', array(), SWT_VER );
 
-	wp_enqueue_style( SWT_SLUG . '-gutenberg', $css_uri . '/gutenberg' . $file_prefix . '.css', array(), SWT_VER );
+	wp_enqueue_style( SWT_SLUG . '-gutenberg', $css_uri . 'gutenberg' . $file_prefix . '.css', array(), SWT_VER );
 
 	$swt_inline_css = apply_filters( 'swt_dynamic_theme_css', '' );
 	if ( $swt_inline_css ) {
@@ -53,7 +53,7 @@ function enqueue_frontend_scripts(): void {
 
 	/* Load Woocommerce Styles */
 	if ( class_exists( 'WooCommerce' ) ) {
-		wp_enqueue_style( SWT_SLUG . '-woocommerce', $css_uri . '/compatibility/woocommerce' . $file_prefix . '.css', array(), SWT_VER );
+		wp_enqueue_style( SWT_SLUG . '-woocommerce', $css_uri . 'compatibility/woocommerce' . $file_prefix . '.css', array(), SWT_VER );
 	}
 
 	/* Load Theme Scripts*/
@@ -99,7 +99,7 @@ function enqueue_editor_scripts(): void {
 	$deps  = $asset['dependencies'];    
 	array_push( $deps, 'updates' );
 	
-	wp_enqueue_style( SWT_SLUG . '-gutenberg-editor', $css_uri . '/gutenberg-editor' . $file_prefix . '.css', array(), SWT_VER );
+	wp_enqueue_style( SWT_SLUG . '-gutenberg-editor', $css_uri . 'gutenberg-editor' . $file_prefix . '.css', array(), SWT_VER );
 
 	wp_register_script( SWT_SLUG . '-editor', $js . 'editor.js', $deps, SWT_VER, true );
 
@@ -156,7 +156,7 @@ function localize_editor_script() {
  *
  * @return void
  */
-function enqueue_editor_block_styles() {
+function enqueue_editor_block_styles(): void {
 
 	// Disable Core Block Patterns.
 	remove_theme_support( 'core-block-patterns' );
@@ -184,7 +184,7 @@ add_action( 'after_setup_theme', SWT_NS . 'enqueue_editor_block_styles' );
  *
  * @return void
  */
-function spectra_one_setup() {
+function spectra_one_setup(): void {
 	/*
 	* Make theme available for translation.
 	* Translations can be filed at WordPress.org. See: https://translate.wordpress.org/projects/wp-themes/twentyfifteen
@@ -195,3 +195,24 @@ function spectra_one_setup() {
 }
 
 add_action( 'after_setup_theme', SWT_NS . 'spectra_one_setup' );
+
+
+
+/**
+ * Pattern categories.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function pattern_categories(): void {
+	register_block_pattern_category(
+		'pages',
+		array(
+			'label'       => __( 'Pages', 'spectra-one' ),
+			'description' => __( 'Patterns containing page and post layouts', 'spectra-one' ),
+		)
+	);
+}
+
+add_action( 'after_setup_theme', SWT_NS . 'pattern_categories' );

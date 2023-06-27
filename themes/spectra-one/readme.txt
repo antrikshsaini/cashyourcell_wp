@@ -2,7 +2,7 @@
 Contributors: brainstormforce
 Requires at least: 6.1
 Tested up to: 6.2
-Stable tag: 0.0.5
+Stable tag: 1.0.1
 Requires PHP: 7.4
 License: GPL-2.0-or-later
 Tags: full-site-editing, blog, theme-options, rtl-language-support, full-width-template
@@ -46,27 +46,31 @@ License URI : https://heroicons.com
 
 Images
 
-Hero
+Hero banner
 License : CC0 1.0 Universal (CC0 1.0)
 License URI : https://pxhere.com/en/license,
-https://pxhere.com/en/photo/13688
+https://pxhere.com/en/photo/518915
 
 Alternate image text
 License : CC0 1.0 Universal (CC0 1.0)
-License URI : https://pxhere.com/en/license,
-https://pxhere.com/en/photo/1629588
-https://pxhere.com/en/photo/1434697
-https://pxhere.com/en/photo/1446749
-https://pxhere.com/en/photo/1450327
+License URI : https://stocksnap.io/license,
+https://stocksnap.io/photo/macbook-computer-AU9KTL3NU8
+https://stocksnap.io/photo/olympus-black&white-F4YBLTO81N
+https://stocksnap.io/photo/tomato-fresh-9ISAFDQGUT
+https://stocksnap.io/photo/dirt-road-TPPZ3SU9NC
+https://stocksnap.io/photo/people-woman-FLU1A9EK7E
+https://stocksnap.io/photo/laptop-typing-JXHUVN906T
 
 Testimonial
 License : CC0 1.0 Universal (CC0 1.0)
 License URI : https://pxhere.com/en/license,
-https://pxhere.com/en/photo/1573331
-https://pxhere.com/en/photo/625568
-https://pxhere.com/en/photo/764654
+License URI : https://stocksnap.io/license,
+https://stocksnap.io/photo/male-professional-6QXAIH13O6
+https://stocksnap.io/photo/confident-business-ZMIFYSYFK8
+https://stocksnap.io/photo/business-man-7BQNRHB6EX
+​​https://pxhere.com/en/photo/1573331
 
-Featured Logo
+Featured logo
 License : Fair Use License
 License URI : https://logoipsum.com/license/,
 https://logoipsum.com/artwork/265
@@ -75,19 +79,67 @@ https://logoipsum.com/artwork/239
 https://logoipsum.com/artwork/238
 https://logoipsum.com/artwork/236
 
+Split image right
+License : CC0 1.0 Universal (CC0 1.0)
+License URI : https://pxhere.com/en/license,
+https://pxhere.com/en/photo/764654
+https://pxhere.com/en/photo/451655
+https://pxhere.com/en/photo/33863
+https://pxhere.com/en/photo/814735
+
+Spectra install banner
+License : CC0 1.0 Universal (CC0 1.0)
+License URI : https://stocksnap.io/license,
+https://stocksnap.io/photo/christmas-cookie-VDTQON9DDC
+
+
 Illustrations used are created by Brainstorm Force and released under Creative Commons ( CC0 ) License.
-https://wpspectra.com/wp-content/uploads/2023/03/spectra-plugin-banner.jpg
-https://wpspectra.com/wp-content/uploads/2023/04/spectra-one-hero-gradient.png
-https://wpspectra.com/wp-content/uploads/2023/04/spectra-one-banner-gradient.png
-https://wpspectra.com/wp-content/uploads/2023/04/content-1.png
-https://wpspectra.com/wp-content/uploads/2023/04/content-2.png
-https://wpspectra.com/wp-content/uploads/2023/04/content-3.png
-https://wpspectra.com/wp-content/uploads/2023/04/spectra-one-hero-image.png
-https://wpspectra.com/wp-content/uploads/2023/04/split-content.png
+https://wpspectra.com/wp-content/uploads/2023/05/spectra-one-hero-section-img.png
+https://wpspectra.com/wp-content/uploads/2023/05/spectra-one-content-01.png
+https://wpspectra.com/wp-content/uploads/2023/05/spectra-one-content-02.png
+https://wpspectra.com/wp-content/uploads/2023/05/spectra-one-content-03.png
+https://wpspectra.com/wp-content/uploads/2023/05/spectra-one-split-content-img.png
+https://wpspectra.com/wp-content/uploads/2023/05/spectra-plugin-banner-img.png
+https://wpspectra.com/wp-content/uploads/2023/05/spectra-one-avatar-01.png
+https://wpspectra.com/wp-content/uploads/2023/05/spectra-one-avatar-02.png
+https://wpspectra.com/wp-content/uploads/2023/05/spectra-one-avatar-03.png
+https://wpspectra.com/wp-content/uploads/2023/05/spectra-one-avatar-04.png
 
 © Copyright Spectra One 2023, Spectra.
 
 == Changelog ==
+
+= 1.0.1 =
+* New: Added shadow for header while sticky.
+* Update: Hide and show option preview in the editor.
+* Update: Transparent header option preview in the editor.
+* Fix: When a simple block style is enabled, the author block section collapses if the bio is too long.
+* Fix Spectra plugin compatibility with button block text.
+
+= 1.0.0 =
+* New: Added sidebar support for page and post.
+* New: Simple block styling for Latest post widget block.
+* New: Minimal block styling for Category list and Archives widget blocks.
+* New: Simple block styling for Latest comments widget block.
+* New: Pill block styling for Tag cloud widget block.
+* New: Inverse block styling for button block.
+* New: Direct link to edit template for page and post inside the admin bar.
+* New: Blend header patterns.
+* New: Hero page and post pattern.
+* New: Added comments and featured image support for pages.
+* Update: Removed unnecessary parameters in theme.json.
+* Update: Front page and related patterns.
+* Update: Global style variations.
+* Update: Post title section for all default templates. 
+* Update: Header left menu pattern.
+* Update: Spectra plugin install banner UI.
+* Update: Author user name vertically aligned in the center when author bio is removed.
+* Fix: Footer alignment issue when less content is added on page and post.
+* Fix: Post meta values getting saved in database even if not selected for page and post.
+* Fix: Removed additional space on the left and right of the search width when the search page adapts to mobile screen size. 
+* Fix: Removed extra spacing while sticky header is enabled when transitioning from desktop to mobile screen sizes.
+* Fix: Center aligned post hero section categories on responsive.
+* Fix: Heading overflowing outside of container on responsive when padding is added.
 
 = 0.0.5 = 
 * Fix: Placeholder not linked with single post / page on archive pages.
