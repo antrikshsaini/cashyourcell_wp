@@ -1,0 +1,16 @@
+2023-06-28T00:17:15+00:00 CRITICAL Uncaught Error: Call to undefined function WprAddons\Modules\Forms\Widgets\wpforms_display() in /Users/antrix/Documents/wordpressLocal/app/public/wp-content/plugins/royal-elementor-addons/modules/forms/widgets/wpr-forms.php:2413
+Stack trace:
+#0 /Users/antrix/Documents/wordpressLocal/app/public/wp-content/plugins/royal-elementor-addons/modules/forms/widgets/wpr-forms.php(2440): WprAddons\Modules\Forms\Widgets\Wpr_Forms->render_wpforms_template(Array)
+#1 /Users/antrix/Documents/wordpressLocal/app/public/wp-content/plugins/elementor/includes/base/controls-stack.php(2268): WprAddons\Modules\Forms\Widgets\Wpr_Forms->render()
+#2 /Users/antrix/Documents/wordpressLocal/app/public/wp-content/plugins/elementor/includes/base/widget-base.php(609): Elementor\Controls_Stack->render_by_mode()
+#3 /Users/antrix/Documents/wordpressLocal/app/public/wp-content/plugins/elementor/core/base/document.php(292): Elementor\Widget_Base->render_content()
+#4 /Users/antrix/Documents/wordpressLocal/app/public/wp-content/plugins/elementor/includes/managers/widgets.php(445): Elementor\Core\Base\Document->render_element(Array)
+#5 [internal function]: Elementor\Widgets_Manager->ajax_render_widget(Array, Object(Elementor\Core\Common\Modules\Ajax\Module))
+#6 /Users/antrix/Documents/wordpressLocal/app/public/wp-content/plugins/elementor/core/common/modules/ajax/module.php(175): call_user_func(Array, Array, Object(Elementor\Core\Common\Modules\Ajax\Module))
+#7 /Users/antrix/Documents/wordpressLocal/app/public/wp-includes/class-wp-hook.php(308): Elementor\Core\Common\Modules\Ajax\Module->handle_ajax_request('')
+#8 /Users/antrix/Documents/wordpressLocal/app/public/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#9 /Users/antrix/Documents/wordpressLocal/app/public/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#10 /Users/antrix/Documents/wordpressLocal/app/public/wp-admin/admin-ajax.php(188): do_action('wp_ajax_element...')
+#11 {main}
+  thrown in /Users/antrix/Documents/wordpressLocal/app/public/wp-content/plugins/royal-elementor-addons/modules/forms/widgets/wpr-forms.php on line 2413
+
